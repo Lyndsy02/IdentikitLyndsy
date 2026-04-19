@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="estilos1.css">
+<center>
+<header>
+    <section>
+        <ul id="nav"> 
+            <li><a href="../index.html">Inicio</a></li>    
+            <li><a href="../about.html">Sobre mi</a></li>
+            <li><a href="../cuadro.html">Tenis</a></li>
+            <li><a href="trivia/trivia.html">Trivia</a></li>
+            <li><a href="../playlist.html">Playlist</a></li>     
+   
+        </ul>
+    </section>
+    <br>
+</header>
+    <style>
+        #nav li {
+    display: inline;
+    margin-right: 60px; 
+
+    }
+body {
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #eaf2ff, #d9e7ff);
+            color: #1e293b;
+            min-height: 100vh;
+            padding: 50px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+       h1 {
+        font-size: 3rem;
+        color: #0f172a;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+        } 
+         .abme p {
+            font-size: 1rem;
+            color: #000000;
+            font-weight: 600;
+            margin-bottom: 28px;
+        }
+        blockquote {
+            font-size: 1.9rem;
+            font-style: italic;
+            color: #0f172a;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 18px;
+        }
+
+blockquote b {
+  color: #000000;
+}
+
+
+        section {
+            width: 100%;
+            max-width: 820px;
+             background: rgba(255, 255, 255, 0.92);
+             backdrop-filter: blur(8px);
+             border-radius: 28px;
+             text-align: center;
+             box-shadow: 0 18px 45px rgba(30, 58, 138, 0.12);
+             border: 1px solid rgba(255, 255, 255, 0.7);
+            }
+            
+
+
+        #nav a {
+            color: #1d4ed8;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.25s ease;
+        }
+
+        .container {
+            background: #fbfbfc;
+            padding: 80px;
+            border-radius: 20px;
+            width: 600px;
+            text-align: center;
+            margin: 30px auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 25px;
+        }
+
+        .song {
+            background: #8ca9f7;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 20px;
+        }
+
+        .song:hover {
+            background: #637ae4;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎧 Mi Playlist</h1>
+<br>
+<br>
+        <audio id="player" controls></audio>
+
+        <div class="song" onclick="playSong('videos/Dream-on-aerosmith.mp3')">🎵 Dream On - Aerosmith</div>
+        <div class="song" onclick="playSong('videos/Hey-jude-the-Beatles.mp3')">🎵 Hey Jude - The Beatles</div>
+        <div class="song" onclick="playSong('videos/Viva-la-vida-Coldplay.mp3')">🎵 Viva La Vida - Coldplay</div>
+        <div class="song" onclick="playSong('videos/Californication-RHCP.mp3')">🎵 Californication - Red Hot Chilli Peppers</div>
+        <div class="song" onclick="playSong('videos/Boulevard-of-broken-dreams.mp3')">🎵 Boulevard of Broken Dreams - Green Day</div>
+
+    </div>
+
+    <script>
+        function playSong(song) {
+            let player = document.getElementById("player");
+            player.src = song;
+            player.play();
+        }
+    </script>
+<footer>
+    <p>© 2026 Lyndsy Camara</p>
+</footer>
+</body>
+</html>
+</center>
